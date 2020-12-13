@@ -28,7 +28,7 @@ const AnimationWrapper = styled.div<Props>`
   top: ${(props) => props.top}%;
   left: ${(props) => props.left}%;
   background-color: ${(props) => props.farge};
-  font-family: "arial";
+  font-family: "Lobster", cursive;
   background-image: radial-gradient(circle at right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   border-radius: 50%;
   height: ${size};

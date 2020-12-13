@@ -9,11 +9,11 @@ const JuletreWrapper = styled.div`
   position: absolute;
   bottom: 0;
   right: 20%;
-  height: 50vh;
+  height: min(50vmax, 70vh);
   animation: ${animasjoner.vippOpp} 1s backwards;
   animation-delay: ${delay + 1}s;
   transform-origin: bottom;
-  font-size: 2vh;
+  font-size: min(2vmax, 3vh);
 `;
 
 const StyledJuletre = styled(JuletreIkon)`
