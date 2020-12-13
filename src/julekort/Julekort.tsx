@@ -10,9 +10,8 @@ import { animasjoner, delay } from "./animasjoner";
 
 const Style = styled.div`
   position: relative;
-  height: 100vh;
-  max-height: 100vh;
-  max-height: -webkit-fill-available;
+  transition: height 0.2s;
+  height: ${window.innerHeight}px;
   overflow: hidden;
   background: linear-gradient(#103, #108);
   color: palegoldenrod;
@@ -25,7 +24,7 @@ const getStyle = (brightness: number, bottom = 0) => css`
 `;
 
 const StyledBondegård = styled(Bondegård)`
-  ${getStyle(35)};
+  ${getStyle(45)};
   width: 80%;
   left: -5%;
   animation: ${animasjoner.vippOpp} 1s backwards;

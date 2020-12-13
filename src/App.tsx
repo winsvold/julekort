@@ -1,13 +1,17 @@
 import React from "react";
 import "./reset.css";
 import Julekort from "./julekort/Julekort";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyling = createGlobalStyle`
   html {
     background-color: black;
-    height: -webkit-fill-available;
+    color: white;
   }
+`;
+
+const Style = styled.div`
+  padding: 5rem;
 `;
 
 function App() {
