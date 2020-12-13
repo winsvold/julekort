@@ -8,12 +8,12 @@ import Julekule from "./Julekule";
 const JuletreWrapper = styled.div`
   position: absolute;
   bottom: 0;
-  right: 20%;
-  height: min(50vmax, 70vh);
+  right: 20vmin;
+  height: min(35vmax, 70vh);
   animation: ${animasjoner.vippOpp} 1s backwards;
   animation-delay: ${delay + 1}s;
   transform-origin: bottom;
-  font-size: min(2vmax, 3vh);
+  font-size: min(1.6vmax, 3vh);
 `;
 
 const StyledJuletre = styled(JuletreIkon)`
