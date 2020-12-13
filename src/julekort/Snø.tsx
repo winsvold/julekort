@@ -31,7 +31,7 @@ const Base = styled.div`
 const SnoFlak = styled.div<{ offset: number; speed: number; sway: number; delay: number }>`
   position: absolute;
   top: 0;
-  left: ${(props) => props.offset * 100}100%;
+  left: ${(props) => props.offset * 100}%;
   height: 0.5vmin;
   width: 0.5vmin;
   border-radius: 50%;
@@ -39,13 +39,13 @@ const SnoFlak = styled.div<{ offset: number; speed: number; sway: number; delay:
   opacity: 0.5;
   animation: ${descend} ease-out ${(props) => props.speed * 10 + 30}s both infinite,
     ${sway} ease-in-out 1.5s alternate infinite -${(props) => props.sway * 4}s;
-  animation-delay: ${(props) => props.delay * 40 + 6}s;
+  animation-delay: ${(props) => props.delay * 30 + 3}s;
 `;
 
 function Snø() {
   return (
     <Base>
-      {[...new Array(20)].map((_, index) => (
+      {[...new Array(10)].map((_, index) => (
         <SnoFlak key={index} speed={Math.random()} offset={Math.random()} sway={Math.random()} delay={Math.random()} />
       ))}
     </Base>
