@@ -14,6 +14,8 @@ const Style = styled.div`
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(#103, #108);
+  color: palegoldenrod;
 `;
 
 const getStyle = (brightness: number, bottom = 0) => css`
@@ -38,27 +40,29 @@ const StyledBondegård = styled(Bondegård)`
 `;
 
 const StyledFjell = styled(Fjell)`
-  ${getStyle(25)};
+  ${getStyle(15)};
   animation: ${vippOpp} 1s backwards;
   animation-delay: ${d}s;
   transform-origin: bottom;
 `;
 
-const skyAnimasjon = keyframes`
+const popIn = keyframes`
   from {
     transform: translateX(-500%);
   }
-  10% {
-   transform: translateX(-50%);
+`;
+
+const skyAnimasjon = keyframes`
+  to {
+    transform: translateX(50%);
   }
 `;
 
 const StyledSky = styled(Sky)`
-  ${getStyle(40, 35)};
-  animation: ${skyAnimasjon} 20s backwards;
-  animation-delay: ${d + 0.5}s;
+  ${getStyle(50, 35)};
+  animation: ${skyAnimasjon} 30s infinite alternate, ${popIn} 1s backwards ${d + 1}s;
   width: 30%;
-  left: 20%;
+  left: 5%;
 `;
 
 const JuletreWrapper = styled.div`
@@ -77,7 +81,7 @@ const StyledJuletre = styled(JuletreIkon)`
   filter: brightness(50%);
 `;
 
-const StyledStjerne = styled(Stjerne)`
+const JuletreSjerne = styled(LitenStjerne)`
   position: absolute;
   top: -2%;
   height: 15%;
@@ -96,7 +100,7 @@ const dropDown = keyframes`
 const blink = keyframes`
   from {
     fill: lightgoldenrodyellow;
-    transform: scale(1.2);
+    transform: scale(1.2) ;
   }
   20% {
     fill: gold;
@@ -111,7 +115,7 @@ const StyledLitenStjerne = styled(LitenStjerne)<{ top: number; right: number; si
   right: ${(props) => props.right}%;
   stroke: none;
   fill: gold;
-  animation: ${dropDown} 1s backwards, ${blink} 3s infinite;
+  animation: ${dropDown} 1s backwards, ${blink} 4s infinite;
   animation-delay: ${(props) => 1 / props.size + 1.5 + d}s;
 `;
 
@@ -165,7 +169,7 @@ function Julekort() {
       <StyledBondegård />
       <JuletreWrapper>
         <StyledJuletre />
-        <StyledStjerne />
+        <JuletreSjerne />
       </JuletreWrapper>
       <Tekst>
         <span>God</span>
