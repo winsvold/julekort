@@ -8,11 +8,6 @@ const GlobalStyling = createGlobalStyle`
     background-color: black;
     height: -webkit-fill-available;
   }
-  
-  body {
-      min-height: 100vh;
-      min-height: -webkit-fill-available;
-  }
 `;
 
 function App() {

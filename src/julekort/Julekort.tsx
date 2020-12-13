@@ -12,6 +12,7 @@ const Style = styled.div`
   position: relative;
   height: 100vh;
   max-height: 100vh;
+  max-height: -webkit-fill-available;
   overflow: hidden;
   background: linear-gradient(#103, #108);
   color: palegoldenrod;
