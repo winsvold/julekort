@@ -42,19 +42,6 @@ const JulekuleStyle = styled.div<Props>`
   align-items: center;
   justify-content: center;
   color: white;
-  /*
-  &::after {
-    box-shadow: inset 0.3em 0.3em 1em rgba(255, 255, 255, 0.5);
-    background-image: radial-gradient(circle at right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-  }
-  */
 `;
 
 const Base = styled.span`
