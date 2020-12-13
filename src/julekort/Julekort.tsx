@@ -1,14 +1,12 @@
 import * as React from "react";
 import styled, { css, keyframes } from "styled-components/macro";
 import Bondegård from "./ikoner/Bondegård";
-import JuletreIkon from "./ikoner/JuletreIkon";
 import Fjell from "./ikoner/Fjell";
 import Sky from "./ikoner/Sky";
-import Stjerne from "./ikoner/Stjerne";
 import LitenStjerne from "./ikoner/LitenStjerne";
 import Måne from "./ikoner/Måne";
-
-const d = 3;
+import Juletre from "./Juletre";
+import { animasjoner, delay } from "./animasjoner";
 
 const Style = styled.div`
   position: relative;
@@ -24,88 +22,27 @@ const getStyle = (brightness: number, bottom = 0) => css`
   bottom: ${bottom}%;
 `;
 
-const vippOpp = keyframes`
-  from {
-    transform: rotateX(90deg);
-  }
-`;
-
 const StyledBondegård = styled(Bondegård)`
   ${getStyle(35)};
   width: 80%;
   left: -5%;
-  animation: ${vippOpp} 1s backwards;
-  animation-delay: ${0.5 + d}s;
+  animation: ${animasjoner.vippOpp} 1s backwards;
+  animation-delay: ${0.5 + delay}s;
   transform-origin: bottom;
 `;
 
 const StyledFjell = styled(Fjell)`
   ${getStyle(15)};
-  animation: ${vippOpp} 1s backwards;
-  animation-delay: ${d}s;
+  animation: ${animasjoner.vippOpp} 1s backwards;
+  animation-delay: ${delay}s;
   transform-origin: bottom;
-`;
-
-const popIn = keyframes`
-  from {
-    transform: translateX(-500%);
-  }
-`;
-
-const skyAnimasjon = keyframes`
-  to {
-    transform: translateX(50%);
-  }
 `;
 
 const StyledSky = styled(Sky)`
   ${getStyle(50, 35)};
-  animation: ${skyAnimasjon} 30s infinite alternate, ${popIn} 1s backwards ${d + 1}s;
+  animation: ${animasjoner.skyAnimasjon} 30s infinite alternate, ${animasjoner.popIn} 1s backwards ${delay + 1}s;
   width: 30%;
   left: 5%;
-`;
-
-const JuletreWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 20%;
-  height: 40%;
-  animation: ${vippOpp} 1s backwards;
-  animation-delay: ${d + 1}s;
-  transform-origin: bottom;
-`;
-
-const StyledJuletre = styled(JuletreIkon)`
-  height: 100%;
-  transform: translateY(10%);
-  filter: brightness(50%);
-`;
-
-const JuletreSjerne = styled(LitenStjerne)`
-  position: absolute;
-  top: -2%;
-  height: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  stroke: none;
-  fill: gold;
-`;
-
-const dropDown = keyframes`
-  from {
-    top: -30vh;
-  }
-`;
-
-const blink = keyframes`
-  from {
-    fill: lightgoldenrodyellow;
-    transform: scale(1.2) ;
-  }
-  20% {
-    fill: gold;
-    transform: scale(1);
-  }
 `;
 
 const StyledLitenStjerne = styled(LitenStjerne)<{ top: number; right: number; size: number }>`
@@ -115,8 +52,8 @@ const StyledLitenStjerne = styled(LitenStjerne)<{ top: number; right: number; si
   right: ${(props) => props.right}%;
   stroke: none;
   fill: gold;
-  animation: ${dropDown} 1s backwards, ${blink} 4s infinite;
-  animation-delay: ${(props) => 1 / props.size + 1.5 + d}s;
+  animation: ${animasjoner.dropDown} 1s backwards, ${animasjoner.blink} 4s infinite;
+  animation-delay: ${(props) => 1 / props.size + 2.2 + delay}s;
 `;
 
 const måneAnimasjon = keyframes`
@@ -136,14 +73,8 @@ const StyledMåne = styled(Måne)`
   animation: ${måneAnimasjon} 3s backwards 1s;
 `;
 
-const fadeIn = keyframes`
-from {
-  opacity: 0;
-}
-`;
-
 const Tekst = styled.div`
-  animation: ${fadeIn} 5s;
+  animation: ${animasjoner.fadeIn} 5s;
   font-family: "Lobster", cursive;
   position: absolute;
   top: 20%;
@@ -167,10 +98,7 @@ function Julekort() {
       <StyledSky />
       <StyledFjell />
       <StyledBondegård />
-      <JuletreWrapper>
-        <StyledJuletre />
-        <JuletreSjerne />
-      </JuletreWrapper>
+      <Juletre />
       <Tekst>
         <span>God</span>
         <span>jul</span>
