@@ -7,6 +7,7 @@ import LitenStjerne from "./ikoner/LitenStjerne";
 import Måne from "./ikoner/Måne";
 import Juletre from "./Juletre";
 import { animasjoner, delay } from "./animasjoner";
+import Snø from "./Snø";
 
 const Style = styled.div`
   position: relative;
@@ -98,6 +99,7 @@ function Julekort() {
       <StyledMåne />
       <StyledSky />
       <StyledFjell />
+      <Snø />
       <StyledBondegård />
       <Juletre />
       <Tekst>

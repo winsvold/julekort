@@ -1,7 +1,7 @@
 import React from "react";
 import "./reset.css";
 import Julekort from "./julekort/Julekort";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyling = createGlobalStyle`
   html {
