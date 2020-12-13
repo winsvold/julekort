@@ -10,10 +10,6 @@ const GlobalStyling = createGlobalStyle`
   }
 `;
 
-const Style = styled.div`
-  padding: 5rem;
-`;
-
 function App() {
   return (
     <>
