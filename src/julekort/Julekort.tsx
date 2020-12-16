@@ -75,7 +75,8 @@ const StyledMåne = styled(Måne)`
   animation: ${måneAnimasjon} 3s backwards 1s;
 `;
 
-const Tekst = styled.div`
+const Tekst = styled.h1`
+  font-weight: 400;
   animation: ${animasjoner.fadeIn} 5s;
   font-family: "Lobster", cursive;
   position: absolute;
@@ -92,15 +93,15 @@ const Tekst = styled.div`
 
 function Julekort() {
   return (
-    <Style>
-      <StyledLitenStjerne right={5} top={5} size={3} />
-      <StyledLitenStjerne right={15} top={7} size={2} />
-      <StyledLitenStjerne right={12} top={20} size={2.5} />
-      <StyledMåne />
-      <StyledSky />
-      <StyledFjell />
+    <Style aria-label="Julekort med animasjoner. Mørk blå nattehimmel som bakgrunn. En nymåne som sakte kommer til syne. Et fjell, en bondegård og et juletre som spretter opp. Julekuler som spretter frem fra treet. Små stjerner som dukker opp på himmelen. Snø som daler sakte ned.">
+      <StyledLitenStjerne aria-label="Liten stjerne på himmelen" right={5} top={5} size={3} />
+      <StyledLitenStjerne aria-label="Liten stjerne på himmelen" right={15} top={7} size={2} />
+      <StyledLitenStjerne aria-label="Liten stjerne på himmelen" right={12} top={20} size={2.5} />
+      <StyledMåne aria-label="Nymåne på himmelen" />
+      <StyledSky aria-label="Liten sky som glir sakte frem og tilbake" />
+      <StyledFjell aria-label="Fjell med snø i det fjerne" />
       <Snø />
-      <StyledBondegård />
+      <StyledBondegård aria-label="Bondegård med snø på taket" />
       <Juletre />
       <Tekst>
         <span>God</span>

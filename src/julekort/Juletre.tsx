@@ -34,9 +34,9 @@ const JuletreSjerne = styled(LitenStjerne)`
 
 function Juletre() {
   return (
-    <JuletreWrapper>
+    <JuletreWrapper aria-label="Juletre">
       <StyledJuletre />
-      <JuletreSjerne />
+      <JuletreSjerne aria-label="Julestjerne" />
       <Julekule top={22} left={22} farge="#FF0700" rotation={5} delay={0.3} />
       <Julekule top={35} left={50} farge="#123EAB" rotation={-5} delay={0.2} />
       <Julekule top={45} left={10} farge="#123EAB" rotation={3} delay={0.1} />

@@ -85,7 +85,7 @@ const Snor = styled.span`
 const Julekule = (props: Props) => {
   return (
     <AnimationWrapper {...props}>
-      <JulekuleStyle {...props}>
+      <JulekuleStyle aria-label="Julekule" {...props}>
         <Snor />
         <Base />
         nav
