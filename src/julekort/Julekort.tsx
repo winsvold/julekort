@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import styled, { css, keyframes } from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 import Bondegård from "./ikoner/Bondegård";
 import Fjell from "./ikoner/Fjell";
 import Sky from "./ikoner/Sky";
@@ -8,8 +8,6 @@ import LitenStjerne from "./ikoner/LitenStjerne";
 import Juletre from "./Juletre";
 import { animasjoner, delay } from "./animasjoner";
 import Snø from "./Snø";
-import Head from "next/head";
-import withErrorBoundary from "../withErrorBoundary";
 import Stativ from "./Stativ";
 import Måne from "./Måne/Måne";
 
@@ -92,10 +90,6 @@ function Julekort() {
 
   return (
     <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-      </Head>
       <Style
         height={height}
         aria-label="Julekort med animasjoner. Mørk blå nattehimmel som bakgrunn. En nymåne som sakte kommer til syne. Et fjell, en bondegård og et juletre som spretter opp. Julekuler som spretter frem fra treet. Små stjerner som dukker opp på himmelen. Snø som daler sakte ned."
@@ -119,4 +113,4 @@ function Julekort() {
   );
 }
 
-export default withErrorBoundary(Julekort, "Julekort");
+export default Julekort;

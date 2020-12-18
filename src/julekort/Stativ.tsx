@@ -1,11 +1,10 @@
 import * as React from "react";
 import styled, { css } from "styled-components/macro";
-import { navFrontend } from "../../styles/navFarger";
 import { keyframes } from "styled-components/macro";
 import { delay } from "./animasjoner";
 import Sokk from "./ikoner/Sokk";
 import { useState } from "react";
-import { SiTypescript } from "react-icons/all";
+import { navFrontend } from "../utils/navFarger";
 
 const rotateIn = keyframes`
 from {
