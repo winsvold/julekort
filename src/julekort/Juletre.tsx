@@ -14,12 +14,14 @@ const JuletreWrapper = styled.div`
   animation-delay: ${delay + 1}s;
   transform-origin: bottom;
   font-size: min(1.6vmax, 3vh);
+  pointer-events: none;
 `;
 
 const StyledJuletre = styled(JuletreIkon)`
   height: 100%;
   transform: translateY(10%);
   filter: brightness(50%);
+  pointer-events: none;
 `;
 
 const JuletreSjerne = styled(LitenStjerne)`

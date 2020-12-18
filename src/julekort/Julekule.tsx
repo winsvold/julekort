@@ -17,28 +17,45 @@ const popUp = keyframes`
     transform: scale(0);
   }
   70% {
-  transform: scale(1.2);
+    transform: scale(1.2);
   }
 `;
 
-const AnimationWrapper = styled.div<Props>`
+const PopInAnimation = styled.div<Props>`
   animation: ${popUp} 0.5s backwards 1s;
-  animation-delay: ${(props) => delay + 2 + props.delay}s;
+  animation-delay: ${(props) => delay + 1.7 + props.delay}s;
   position: absolute;
   top: ${(props) => props.top}%;
   left: ${(props) => props.left}%;
+`;
+
+const shake = keyframes`
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+`;
+
+const ShakeAnimation = styled.div`
+  animation: ${shake} 0.1s 6 alternate linear -0.05s;
+  transform-origin: top;
+  &:hover {
+    animation: none;
+  }
+  pointer-events: auto;
+`;
+
+const JulekuleStyle = styled.div<Props>`
+  transform: rotate(${(props) => props.rotation}deg);
+  display: flex;
   background-color: ${(props) => props.farge};
   font-family: "Lobster", cursive;
   background-image: radial-gradient(circle at right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   border-radius: 50%;
   height: ${size};
   width: ${size};
-`;
-
-const JulekuleStyle = styled.div<Props>`
-  transform: rotate(${(props) => props.rotation}deg);
-  display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
   color: white;
@@ -46,7 +63,6 @@ const JulekuleStyle = styled.div<Props>`
 
 const Base = styled.span`
   position: absolute;
-  content: "";
   display: block;
   width: 1em;
   height: 0.3em;
@@ -71,7 +87,7 @@ const Snor = styled.span`
   &::after {
     content: "";
     position: absolute;
-    top: -0.6em;
+    top: -0.4em;
     border: ${width} solid white;
     left: -${width};
     width: 0.6em;
@@ -84,13 +100,15 @@ const Snor = styled.span`
 
 const Julekule = (props: Props) => {
   return (
-    <AnimationWrapper {...props}>
-      <JulekuleStyle aria-label="Julekule" {...props}>
-        <Snor />
-        <Base />
-        nav
-      </JulekuleStyle>
-    </AnimationWrapper>
+    <PopInAnimation {...props}>
+      <ShakeAnimation>
+        <JulekuleStyle aria-label="Julekule" {...props}>
+          <Snor />
+          <Base />
+          nav
+        </JulekuleStyle>
+      </ShakeAnimation>
+    </PopInAnimation>
   );
 };
 export default Julekule;

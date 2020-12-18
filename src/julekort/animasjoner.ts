@@ -10,7 +10,7 @@ export const animasjoner = {
   `,
   popIn: keyframes`
   from {
-    transform: translateX(-500%);
+    left: -100vw;
   }
 `,
   skyAnimasjon: keyframes`
