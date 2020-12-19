@@ -87,7 +87,6 @@ const useWindowHeight = () => {
 
 function Julekort() {
   const height = useWindowHeight();
-
   return (
     <>
       <Style
