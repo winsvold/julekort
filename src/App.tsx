@@ -2,7 +2,8 @@ import React from "react";
 import "./reset.css";
 import Julekort from "./julekort/Julekort";
 import styled, { createGlobalStyle } from "styled-components";
-import Maleri from "./svg/Maleri";
+import Trær from "./Trær/Trær";
+import Maleri from "./ikoner/tsx/Maleri";
 
 const GlobalStyling = createGlobalStyle`
   html {
@@ -35,6 +36,7 @@ function App() {
       <MaleriStyle>
         <Maleri />
       </MaleriStyle>
+      <Trær />
     </>
   );
 }
