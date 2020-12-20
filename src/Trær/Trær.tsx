@@ -36,7 +36,6 @@ const StyledTre = styled(Tre)<{ distance: number; delay: number }>`
   height: calc(var(--size) * 200);
   position: absolute;
   bottom: calc(var(--size) * -15);
-  filter: blur(calc(var(--distance) * 0.02vmin));
 `;
 
 function Trær() {
