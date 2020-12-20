@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled, { css, keyframes } from "styled-components/macro";
 import Tre from "../ikoner/tsx/Tre";
-import { HoytSmaltTre, Tre2, Tre3, Jultre } from "../ikoner/tsx";
+import { HoytSmaltTre, Tre2, Tre3 } from "../ikoner/tsx";
 import SvgTre4 from "../ikoner/tsx/Tre4";
 
 const Style = styled.div`
@@ -46,14 +46,14 @@ function Trær() {
   return (
     <Style>
       <SvgStyle children={<Tre2 />} distance={35} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre />} distance={35} delay={Math.random() * 30} />
+      <SvgStyle children={<HoytSmaltTre />} distance={35} delay={Math.random() * 30} />
       <SvgStyle children={<Tre3 />} distance={25} delay={Math.random() * 30} />
       <SvgStyle children={<Tre />} distance={16} delay={Math.random() * 30} />
       <SvgStyle children={<SvgTre4 />} distance={15} delay={Math.random() * 30} />
       <SvgStyle children={<Tre />} distance={14} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre />} distance={9} delay={Math.random() * 30} />
-      <SvgStyle children={<HoytSmaltTre />} distance={7} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre />} distance={4} delay={Math.random() * 30} />
+      <SvgStyle children={<Tre2 />} distance={9} delay={Math.random() * 30} />
+      <SvgStyle children={<Tre3 />} distance={7} delay={Math.random() * 30} />
+      <SvgStyle children={<Tre2 />} distance={4} delay={Math.random() * 30} />
       <SvgStyle children={<Tre />} distance={2} delay={Math.random() * 30} />
     </Style>
   );
