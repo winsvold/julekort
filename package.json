@@ -28,7 +28,9 @@
     "test": "react-scripts test",
     "typeCheck": "tsc",
     "lint": "eslint src/",
-    "svgToTsx": "npx svgo -f ./src/ikoner/svg/ -o ./src/ikoner/svgo/ --precision=1 && npx @svgr/cli -d src/ikoner/tsx src/ikoner/svgo --typescript --ignore-existing"
+    "svgo": "npx svgo -f ./src/ikoner/svg/ -o ./src/ikoner/svgo/ --precision=1 --disable=removeViewBox --enable=removeDimensions",
+    "svgr": "npx @svgr/cli -d src/ikoner/tsx src/ikoner/svgo --typescript --ignore-existing",
+    "svgToTsx": "npm run svgo && npm run svgr"
   },
   "eslintConfig": {
     "extends": [
