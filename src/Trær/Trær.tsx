@@ -14,7 +14,7 @@ const Style = styled.div`
 const slide = keyframes`
   from {
   opacity: 0;
-    transform: translateX(150em);
+    transform: translateX(100vw);
   }
   5% {
     opacity: 1;
@@ -24,7 +24,7 @@ const slide = keyframes`
   }
   to {
     opacity: 0;
-    transform: translateX(-150em);
+    transform: translateX(-100%);
   }
 `;
 
