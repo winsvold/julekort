@@ -5,7 +5,7 @@ import { delay } from "./animasjoner";
 import Sokk from "./ikoner/Sokk";
 import { useEffect, useState } from "react";
 import { useProgressContext } from "./progress/ProgressContext";
-import { navFrontend } from "../utils/navFarger";
+import { navFrontend } from "../../styles/navFarger";
 
 const rotateIn = keyframes`
 from {

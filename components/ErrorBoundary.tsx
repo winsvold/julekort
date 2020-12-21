@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ErrorInfo } from "react";
 import styled from "styled-components";
-import { navFrontend } from "../utils/navFarger";
+import { navFrontend } from "../styles/navFarger";
 
 interface Props {
   boundaryName?: string;

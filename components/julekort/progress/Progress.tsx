@@ -2,7 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components/macro";
 import HjerteIkon from "../ikoner/HjerteIkon";
 import { useProgressContext } from "./ProgressContext";
-import { navFrontend } from "../../utils/navFarger";
+import { navFrontend } from "../../../styles/navFarger";
 
 const Style = styled.div`
   position: absolute;

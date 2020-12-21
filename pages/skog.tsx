@@ -42,7 +42,7 @@ const SvgStyle = styled.div<{ distance: number; delay: number }>`
   }
 `;
 
-function Trær() {
+function Skog() {
   return (
     <Style>
       <SvgStyle children={<Tre2 />} distance={35} delay={Math.random() * 30} />
@@ -59,4 +59,4 @@ function Trær() {
   );
 }
 
-export default Trær;
+export default Skog;

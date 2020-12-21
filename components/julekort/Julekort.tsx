@@ -12,7 +12,8 @@ import Stativ from "./Stativ";
 import Måne from "./Måne/Måne";
 import Progress from "./progress/Progress";
 import { ProgressContextProvider } from "./progress/ProgressContext";
-import withErrorBoundary from "../components/withErrorBoundary";
+import withErrorBoundary from "../withErrorBoundary";
+import Head from "next/head";
 
 const Style = styled.div<{ height: number }>`
   position: relative;
@@ -22,6 +23,7 @@ const Style = styled.div<{ height: number }>`
   overflow: hidden;
   background: linear-gradient(#103, #108);
   color: palegoldenrod;
+  font-family: "Lobster", cursive;
 `;
 
 const getStyle = (brightness: number, bottom = 0) => css`
@@ -93,6 +95,10 @@ function Julekort() {
 
   return (
     <ProgressContextProvider>
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+      </Head>
       <Style
         height={height}
         aria-label="Julekort med animasjoner. Mørk blå nattehimmel som bakgrunn. En nymåne som sakte kommer til syne. Et fjell, en bondegård og et juletre som spretter opp. Julekuler som spretter frem fra treet. Små stjerner som dukker opp på himmelen. Snø som daler sakte ned."
