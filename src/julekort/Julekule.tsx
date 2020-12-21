@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components/macro";
 import { delay } from "./animasjoner";
+import { useSearchParam } from "react-use";
 
 const size = "3em";
 
@@ -99,13 +100,15 @@ const Snor = styled.span`
 `;
 
 const Julekule = (props: Props) => {
+  const tekst = useSearchParam("til") || "Jul";
+
   return (
     <PopInAnimation {...props}>
       <ShakeAnimation>
         <JulekuleStyle aria-label="Julekule" {...props}>
           <Snor />
           <Base />
-          nav
+          {tekst}
         </JulekuleStyle>
       </ShakeAnimation>
     </PopInAnimation>
