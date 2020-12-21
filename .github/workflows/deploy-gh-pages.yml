@@ -16,7 +16,7 @@ jobs:
       - name: npm install 🚛
         run: npm install
       - name: Build 🔧
-        run: next build && next export
+        run: npm run build
       - name: No jekyll 🚫
         run: touch out/.nojekyll
       - name: Deploy 🚀
