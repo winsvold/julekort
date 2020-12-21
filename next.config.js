@@ -1,4 +1,6 @@
+const isDevelopment = process.env.NODE_ENV === "development";
+
 module.exports = {
-  assetPrefix: "/julekort",
-  basePath: "/julekort",
+  assetPrefix: isDevelopment ? "" : "/julekort",
+  basePath: isDevelopment ? "" : "/julekort",
 };

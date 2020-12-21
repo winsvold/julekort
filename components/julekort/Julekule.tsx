@@ -60,6 +60,8 @@ const JulekuleStyle = styled.div<Props>`
   align-items: center;
   justify-content: center;
   color: white;
+  hyphens: auto;
+  text-align: center;
 `;
 
 const Base = styled.span`

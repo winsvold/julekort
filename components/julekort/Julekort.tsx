@@ -14,6 +14,7 @@ import Progress from "./progress/Progress";
 import { ProgressContextProvider } from "./progress/ProgressContext";
 import withErrorBoundary from "../withErrorBoundary";
 import Head from "next/head";
+import { useSearchParam } from "react-use";
 
 const Style = styled.div<{ height: number }>`
   position: relative;
@@ -74,13 +75,19 @@ const Tekst = styled.h2`
   font-family: "Lobster", cursive;
   position: absolute;
   top: 20%;
-  left: 40%;
+  left: 50%;
   font-size: 20vmin;
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) translateX(-50%);
   color: goldenrod;
+  span {
+    padding-right: 0.2em;
+    line-height: 0.6;
+  }
   span:last-child {
     display: block;
-    transform: translate(1em, -0.4em);
+    transform: translate(0.5em, -0em);
+    hyphens: auto;
+    text-align: center;
   }
 `;
 
@@ -92,6 +99,7 @@ const useWindowHeight = () => {
 
 function Julekort() {
   const height = useWindowHeight();
+  const tekst = useSearchParam("til");
 
   return (
     <ProgressContextProvider>
@@ -117,6 +125,7 @@ function Julekort() {
         <Tekst>
           <span>God</span>
           <span>jul</span>
+          {tekst && <span>{tekst}</span>}
         </Tekst>
       </Style>
     </ProgressContextProvider>
