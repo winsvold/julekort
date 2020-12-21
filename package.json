@@ -2,7 +2,6 @@
   "name": "julekort",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://winsvold.github.io/julekort/",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
