@@ -1,5 +1,4 @@
 module.exports = {
-  assetPrefix: "/julekort/",
+  assetPrefix: "/julekort",
   basePath: "/julekort",
-  target: "serverless",
 };
