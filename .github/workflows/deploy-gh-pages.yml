@@ -1,4 +1,4 @@
-name: Deploy to gh-pages
+name: Deploy nextjs-app to gh-pages
 
 on:
   push:
@@ -16,7 +16,9 @@ jobs:
       - name: npm install 🚛
         run: npm install
       - name: Build 🔧
-        run: npm run build
+        run: next build && next export
+      - name: No jekyll
+        run: touch out/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
