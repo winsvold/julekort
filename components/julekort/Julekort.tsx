@@ -86,8 +86,6 @@ const Tekst = styled.h2`
   span:last-child {
     display: block;
     transform: translate(0.5em, -0em);
-    hyphens: auto;
-    text-align: center;
   }
 `;
 
