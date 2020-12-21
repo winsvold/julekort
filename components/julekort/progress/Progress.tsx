@@ -10,14 +10,14 @@ const Style = styled.div`
   top: 1em;
   left: 1em;
   display: flex;
-  opacity: 0.5;
+  opacity: 0.6;
 `;
 
 const StyledHjerteIkon = styled(HjerteIkon)<{ filled: boolean }>`
-  height: 1em;
+  height: 1rem;
   margin-right: 0.25em;
-  fill: #0006;
-  stroke: #666;
+  fill: #2226;
+  stroke: #777;
   stroke-dasharray: 2;
   transition: 1s;
   ${(props) =>
