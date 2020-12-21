@@ -3,7 +3,8 @@ import styled, { css } from "styled-components/macro";
 import { keyframes } from "styled-components/macro";
 import { delay } from "./animasjoner";
 import Sokk from "./ikoner/Sokk";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useProgressContext } from "./progress/ProgressContext";
 import { navFrontend } from "../utils/navFarger";
 
 const rotateIn = keyframes`
@@ -82,6 +83,11 @@ function SokkKomponent(props: SokkProps) {
 
 function Stativ() {
   const [easterEgg, setEasterEgg] = useState(false);
+  const [, dispatch] = useProgressContext();
+
+  useEffect(() => {
+    easterEgg && dispatch("julesokk");
+  }, [easterEgg]);
 
   return (
     <Style>

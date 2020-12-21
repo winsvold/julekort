@@ -10,6 +10,9 @@ import { animasjoner, delay } from "./animasjoner";
 import Snø from "./Snø";
 import Stativ from "./Stativ";
 import Måne from "./Måne/Måne";
+import Progress from "./progress/Progress";
+import { ProgressContextProvider } from "./progress/ProgressContext";
+import withErrorBoundary from "../components/withErrorBoundary";
 
 const Style = styled.div<{ height: number }>`
   position: relative;
@@ -87,8 +90,9 @@ const useWindowHeight = () => {
 
 function Julekort() {
   const height = useWindowHeight();
+
   return (
-    <>
+    <ProgressContextProvider>
       <Style
         height={height}
         aria-label="Julekort med animasjoner. Mørk blå nattehimmel som bakgrunn. En nymåne som sakte kommer til syne. Et fjell, en bondegård og et juletre som spretter opp. Julekuler som spretter frem fra treet. Små stjerner som dukker opp på himmelen. Snø som daler sakte ned."
@@ -103,13 +107,14 @@ function Julekort() {
         <StyledBondegård aria-label="Bondegård med snø på taket" />
         <Stativ />
         <Juletre />
+        <Progress />
         <Tekst>
           <span>God</span>
           <span>jul</span>
         </Tekst>
       </Style>
-    </>
+    </ProgressContextProvider>
   );
 }
 
-export default Julekort;
+export default withErrorBoundary(Julekort, "Julekort");
