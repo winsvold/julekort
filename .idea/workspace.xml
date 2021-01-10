@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a19761-74b9-4cb8-8580-317500251a5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/mask.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/skog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/skog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -64,6 +63,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.svgToTsx">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -142,6 +152,7 @@
       <workItem from="1608452397235" duration="26317000" />
       <workItem from="1609834496463" duration="1435000" />
       <workItem from="1609882584707" duration="2237000" />
+      <workItem from="1610271164935" duration="7682000" />
     </task>
     <servers />
   </component>
@@ -161,35 +172,35 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="820" y="125" width="520" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1607877027084" />
-    <state width="699" height="290" key="GridCell.Tab.0.bottom" timestamp="1609929037556">
+    <state width="699" height="290" key="GridCell.Tab.0.bottom" timestamp="1610288651836">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="699" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037556" />
-    <state width="699" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1608579599580" />
-    <state width="699" height="290" key="GridCell.Tab.0.center" timestamp="1609929037556">
+    <state width="699" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1610288651836" />
+    <state width="699" height="290" key="GridCell.Tab.0.center" timestamp="1610288651835">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="699" height="290" key="GridCell.Tab.0.center/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037556" />
-    <state width="699" height="290" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1608579599579" />
-    <state width="699" height="290" key="GridCell.Tab.0.left" timestamp="1609929037555">
+    <state width="699" height="290" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1610288651835" />
+    <state width="699" height="290" key="GridCell.Tab.0.left" timestamp="1610288651834">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="699" height="290" key="GridCell.Tab.0.left/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037555" />
-    <state width="699" height="290" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1608579599579" />
-    <state width="699" height="290" key="GridCell.Tab.0.right" timestamp="1609929037556">
+    <state width="699" height="290" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1610288651834" />
+    <state width="699" height="290" key="GridCell.Tab.0.right" timestamp="1610288651835">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="699" height="290" key="GridCell.Tab.0.right/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037556" />
-    <state width="699" height="290" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1608579599580" />
+    <state width="699" height="290" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1610288651835" />
     <state x="208" y="41" key="SettingsEditor" timestamp="1609882938181">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1609882938181" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1609882871261">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1610298899518">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1608129379805" />
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1609882871261" />
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1610298899518" />
     <state x="930" y="164" key="VCS.ChangeListViewerDialog" timestamp="1607877515173">
       <screen x="0" y="25" width="1440" height="875" />
     </state>

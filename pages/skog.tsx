@@ -1,8 +1,8 @@
 import * as React from "react";
+import { useRef } from "react";
 import styled, { css, keyframes } from "styled-components/macro";
 import Tre from "../ikoner/tsx/Tre";
 import { HoytSmaltTre, Tre2, Tre3, Tre4 } from "../ikoner/tsx";
-import { useRef } from "react";
 import { motion } from "framer-motion";
 
 const Style = styled.div`
