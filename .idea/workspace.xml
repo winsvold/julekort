@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a19761-74b9-4cb8-8580-317500251a5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ErrorBoundary.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/withErrorBoundary.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/julekort/ikoner/HjerteIkon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/julekort/progress/Progress.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/julekort/progress/ProgressContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/julekort/Julekort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/julekort/Julekort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/julekort/Måne/nisselue/Nisselue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/julekort/Måne/nisselue/Nisselue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/julekort/Måne/nisselue/Sno.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/julekort/Måne/nisselue/Sno.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/julekort/Stativ.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/julekort/Stativ.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/skog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/skog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -48,38 +41,29 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/styles" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/ikoner/svg" />
-      <recent name="$PROJECT_DIR$/src/ikoner" />
-      <recent name="$PROJECT_DIR$/src/ikoner/tsx" />
-      <recent name="$PROJECT_DIR$/src/julekort/Ikoner" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/julekort/Måne" />
-      <recent name="$PROJECT_DIR$/src/julekort" />
     </key>
   </component>
   <component name="RunManager" selected="npm.svgToTsx">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -95,6 +79,16 @@
       <command value="run" />
       <scripts>
         <script value="buildTsxFromSvg" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -122,10 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.svgToTsx" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.buildTsxFromSvg" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +139,9 @@
       <workItem from="1608375640060" duration="4546000" />
       <workItem from="1608391530019" duration="7412000" />
       <workItem from="1608423757750" duration="393000" />
-      <workItem from="1608452397235" duration="11420000" />
+      <workItem from="1608452397235" duration="26317000" />
+      <workItem from="1609834496463" duration="1435000" />
+      <workItem from="1609882584707" duration="2237000" />
     </task>
     <servers />
   </component>
@@ -156,39 +153,43 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="90" y="268" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.875@0.25.1440.875" timestamp="1607792861872" />
-    <state x="98" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608456613065">
+    <state x="98" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608550283056">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="98" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875@0.25.1440.875" timestamp="1608456613065" />
+    <state x="98" y="213" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875@0.25.1440.875" timestamp="1608550283056" />
     <state x="820" y="125" width="520" height="675" key="DiffContextDialog" timestamp="1607877027084">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="820" y="125" width="520" height="675" key="DiffContextDialog/0.25.1440.875@0.25.1440.875" timestamp="1607877027084" />
-    <state width="1398" height="290" key="GridCell.Tab.0.bottom" timestamp="1608496329903">
+    <state width="699" height="290" key="GridCell.Tab.0.bottom" timestamp="1609929037556">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.bottom/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1608129250741" />
-    <state width="1398" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1608496329903" />
-    <state width="1398" height="290" key="GridCell.Tab.0.center" timestamp="1608496329903">
+    <state width="699" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037556" />
+    <state width="699" height="290" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1608579599580" />
+    <state width="699" height="290" key="GridCell.Tab.0.center" timestamp="1609929037556">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.center/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1608129250740" />
-    <state width="1398" height="290" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1608496329903" />
-    <state width="1398" height="290" key="GridCell.Tab.0.left" timestamp="1608496329900">
+    <state width="699" height="290" key="GridCell.Tab.0.center/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037556" />
+    <state width="699" height="290" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1608579599579" />
+    <state width="699" height="290" key="GridCell.Tab.0.left" timestamp="1609929037555">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.left/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1608129250739" />
-    <state width="1398" height="290" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1608496329900" />
-    <state width="1398" height="290" key="GridCell.Tab.0.right" timestamp="1608496329903">
+    <state width="699" height="290" key="GridCell.Tab.0.left/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037555" />
+    <state width="699" height="290" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1608579599579" />
+    <state width="699" height="290" key="GridCell.Tab.0.right" timestamp="1609929037556">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1398" height="169" key="GridCell.Tab.0.right/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1608129250740" />
-    <state width="1398" height="290" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1608496329903" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1608460130006">
+    <state width="699" height="290" key="GridCell.Tab.0.right/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609929037556" />
+    <state width="699" height="290" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1608579599580" />
+    <state x="208" y="41" key="SettingsEditor" timestamp="1609882938181">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="208" y="41" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1609882938181" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1609882871261">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1608129379805" />
-    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1608460130006" />
+    <state width="500" height="445" key="SwitcherDM/0.25.1440.875@0.25.1440.875" timestamp="1609882871261" />
     <state x="930" y="164" key="VCS.ChangeListViewerDialog" timestamp="1607877515173">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -201,9 +202,10 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="144" y="241" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1607792001226" />
-    <state x="745" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1608460274874">
+    <state x="745" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1609834531997">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="745" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1608460274874" />
+    <state x="745" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875/-2517.-1415.3440.1415@0.25.1440.875" timestamp="1609834531997" />
+    <state x="745" y="214" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1608565853746" />
   </component>
 </project>

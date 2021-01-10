@@ -1,8 +1,9 @@
 import * as React from "react";
 import styled, { css, keyframes } from "styled-components/macro";
 import Tre from "../ikoner/tsx/Tre";
-import { HoytSmaltTre, Tre2, Tre3 } from "../ikoner/tsx";
-import SvgTre4 from "../ikoner/tsx/Tre4";
+import { HoytSmaltTre, Tre2, Tre3, Tre4 } from "../ikoner/tsx";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Style = styled.div`
   position: relative;
@@ -42,19 +43,41 @@ const SvgStyle = styled.div<{ distance: number; delay: number }>`
   }
 `;
 
+const trees = [Tre, Tre2, Tre3, Tre4, HoytSmaltTre];
+const randomTree = () => trees[Math.floor(Math.random() * trees.length)];
+
+function Tree() {
+  const SVG = useRef(randomTree()).current;
+  const distance = useRef(Math.random()).current;
+
+  return (
+    <motion.div
+      style={{
+        position: "absolute",
+        fontSize: `${distance}rem`,
+        bottom: "-5em",
+        zIndex: Math.floor(distance * 1000),
+      }}
+      initial={{ x: "100vw" }}
+      animate={{ x: "-100vw" }}
+      transition={{ duration: 3 / distance, ease: "linear", repeat: Infinity, elapsed: 5 }}
+    >
+      <SVG
+        style={{
+          fill: `hsl(150, 50%, ${35 - distance * 35}%)`,
+          height: "60em",
+        }}
+      />
+    </motion.div>
+  );
+}
+
 function Skog() {
   return (
     <Style>
-      <SvgStyle children={<Tre2 />} distance={35} delay={Math.random() * 30} />
-      <SvgStyle children={<HoytSmaltTre />} distance={35} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre3 />} distance={25} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre />} distance={16} delay={Math.random() * 30} />
-      <SvgStyle children={<SvgTre4 />} distance={15} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre />} distance={14} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre2 />} distance={9} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre3 />} distance={7} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre2 />} distance={4} delay={Math.random() * 30} />
-      <SvgStyle children={<Tre />} distance={2} delay={Math.random() * 30} />
+      {[...new Array(10)].map((_, i) => (
+        <Tree key={i} />
+      ))}
     </Style>
   );
 }
